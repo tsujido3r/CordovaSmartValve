@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Author" content="Sujith Pillai">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,shrink-to-fit=no, width=device-width, viewport-fit=cover" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" type="text/css" href="lib/OnsenUI/css/onsenui.min.css" />
+    <link rel="stylesheet" href="lib/OnsenUI/css/onsen-css-components.min.css">
+    <title>SMART VALVE Wi-Fi Control</title>
+</head>
+
+<body>
+    <ons-navigator id="navigator">
+        <ons-page modifier="material" id="index">
+
+            <ons-toolbar modifier="material">
+                <div class="center"><strong>SMART VALVE Wi-Fi Control</strong></div>
+            </ons-toolbar>
+            <ons-card modifier="material">
+
+                <div class="content">
+                    <div id="enterIP" style="text-align: center;">
+                        <h2>
+                            <strong id="statusText"> Please enter Smart Valve Server IP address to
+                                proceed&nbsp;</strong>
+                        </h2>
+                        <p>
+                            <ons-input id="serverIP" placeholder="ESP32 IP address" modifier="underbar"></ons-input>
+                            <ons-button id="connectButton" onclick="connect()">Connect</ons-button>
+
+                        </p>
+
+                    </div>
+                </div>
+            </ons-card>
+            <ons-card modifier="material">
+
+                <div class="content">
+                    <ons-list modifier="material">
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 1 &nbsp;</strong> <label id="valve1v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve1" class="sw" modifier="material"></ons-switch>&nbsp;
+                            </div>
+                        </ons-list-item>
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 2 &nbsp;</strong> <label id="valve2v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve2" class="sw" modifier="material"></ons-switch>
+                            </div>
+                        </ons-list-item>
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 3 &nbsp;</strong> <label id="valve3v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve3" class="sw" modifier="material"></ons-switch>&nbsp;
+                            </div>
+                        </ons-list-item>
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 4 &nbsp;</strong> <label id="valve4v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve4" class="sw" modifier="material"></ons-switch>
+                            </div>
+                        </ons-list-item>
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 5 &nbsp;</strong> <label id="valve5v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve5" class="sw" modifier="material"></ons-switch>&nbsp;
+                            </div>
+                        </ons-list-item>
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 6 &nbsp;</strong> <label id="valve6v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve6" class="sw" modifier="material"></ons-switch>
+                            </div>
+                        </ons-list-item>
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 7 &nbsp;</strong> <label id="valve7v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve7" class="sw" modifier="material"></ons-switch>&nbsp;
+                            </div>
+                        </ons-list-item>
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE 8 &nbsp;</strong> <label id="valve8v">OFF</label>
+                            </div>
+                            <div class="right">
+                                <ons-switch id="valve8" class="sw" modifier="material"></ons-switch>
+                            </div>
+                        </ons-list-item>
+
+                        <ons-list-item modifier="material">
+                            <div class="center">
+                                <strong>SMART VALVE PWM &nbsp;</strong> <label id="valve9v">0</label>%
+                            </div>
+                            <div class="right">
+                                <ons-range id="valve9" class="rg" modifier="material" style="width: 100%;" value="0"
+                                    max="100"></ons-range>
+                            </div>
+                        </ons-list-item>
+                    </ons-list>
+                </div>
+            </ons-card>
+        </ons-page>
+
+        <!-- Javascript -->
+        <script src="cordova.js"></script>
+        <script src="lib/OnsenUI/js/onsenui.min.js"></script>
+        <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+        <script src="js/wifi_rc.js"></script>
+
+</body>
+
+</html>
